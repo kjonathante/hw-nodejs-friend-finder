@@ -1,6 +1,8 @@
 var path = require("path");
 var express = require('express');
 var bodyParser = require('body-parser')
+var db = require('./app/db')
+var api = require('./app/routes/api')
 
 var app = express();
 
@@ -18,11 +20,9 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 app.use(express.static(path.join(__dirname, 'app/public')));
 
+db.connect()
 
-
-app.get('/', function(req, res){
-  res.send('hello world');
-});
+app.use('/api', api)
 
 var server = app.listen(3000, function() {
   console.log('Server running on ', server.address())
