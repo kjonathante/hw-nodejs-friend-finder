@@ -1,4 +1,3 @@
-$('#root').text('Hello')
 
 $.ajax({
   url: '/api/questions',
