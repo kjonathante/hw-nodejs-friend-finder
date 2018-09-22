@@ -24,6 +24,7 @@ CREATE TABLE answers (
   ans8 INT,
   ans9 INT,
   ans10 INT,
+  photo BLOB,
   PRIMARY KEY (id)
 );
 

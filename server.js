@@ -17,7 +17,7 @@ In general, this is the most recommended way to use body-parser with Express.
 // var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
 // parse application/x-www-form-urlencoded
-app.use(express.urlencoded({ extended: false }))
+//app.use(express.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(express.json())
